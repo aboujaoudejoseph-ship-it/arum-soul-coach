@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --bg: 30 100% 99%;        /* cream */
+  --fg: 235 33% 15%;        /* deep navy */
+  --card: 0 0% 100%;
+  --border: 330 40% 92%;
+}
+
+.dark {
+  --bg: 235 33% 8%;
+  --fg: 330 40% 96%;
+  --card: 235 30% 12%;
+  --border: 235 20% 20%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background: linear-gradient(
+    160deg,
+    hsl(330 90% 97%) 0%,
+    hsl(280 60% 97%) 45%,
+    hsl(30 60% 98%) 100%
+  );
+  color: hsl(var(--fg));
+}
+
+.dark body {
+  background: linear-gradient(
+    160deg,
+    hsl(235 40% 9%) 0%,
+    hsl(250 35% 11%) 50%,
+    hsl(235 30% 8%) 100%
+  );
+}
+
+/* Glassmorphism card used throughout the client app + admin dashboard */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.dark .glass {
+  background: rgba(30, 33, 56, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@keyframes confetti-fall {
+  to {
+    transform: translate(var(--dx, 0px), var(--dy, 200px)) rotate(var(--rot, 180deg));
+    opacity: 0;
+  }
+}
