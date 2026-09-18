@@ -4,6 +4,8 @@ import { moodScore } from "@/lib/mood";
 import EngagementChart from "@/components/admin/EngagementChart";
 import ClientTable, { type ClientRow } from "@/components/admin/ClientTable";
 
+export const runtime = "edge";
+
 export default async function AdminOverviewPage() {
   const supabase = createClient();
   const {
