@@ -8,6 +8,8 @@ import AssignExercises from "@/components/admin/AssignExercises";
 import WheelRadarChart from "@/components/WheelRadarChart";
 import type { WheelValues } from "@/lib/wheel";
 
+export const runtime = "edge";
+
 export default async function ClientDetailPage({ params }: { params: { id: string } }) {
   const supabase = createClient();
   const clientId = params.id;
