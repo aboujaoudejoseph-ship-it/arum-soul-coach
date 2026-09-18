@@ -1,6 +1,8 @@
 import { createClient } from "@/lib/supabase/server";
 import ExerciseLibraryCard from "@/components/admin/ExerciseLibraryCard";
 
+export const runtime = "edge";
+
 export default async function ExerciseLibraryPage() {
   const supabase = createClient();
   const { data: exercises } = await supabase
