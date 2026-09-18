@@ -10,6 +10,8 @@ import ConfidenceForm from "@/components/client/exercises/ConfidenceForm";
 import GratitudeJoyHappinessForm from "@/components/client/exercises/GratitudeJoyHappinessForm";
 import type { WheelValues } from "@/lib/wheel";
 
+export const runtime = "edge";
+
 export default async function ExercisePage({ params }: { params: { slug: string } }) {
   const supabase = createClient();
   const {
