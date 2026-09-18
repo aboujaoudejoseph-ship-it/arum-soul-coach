@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import MoodCheckin from "@/components/client/MoodCheckin";
 
+export const runtime = "edge";
+
 const AFFIRMATIONS = [
   "You are enough. You are worthy. You are loved.",
   "Small steps still move you forward.",
