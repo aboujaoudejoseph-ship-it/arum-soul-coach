@@ -32,4 +32,3 @@ export default function MoodLineChart({ checkins }: { checkins: MoodCheckin[] })
           </ResponsiveContainer>
         );
 }
-</p>
