@@ -2,3 +2,7 @@ name = "arum-soul-coach"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+NEXT_PUBLIC_SUPABASE_URL = "https://mxdkadhirqbqowmxeyfn.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im14ZGthZGhpcnFicW93bXhleWZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg4ODg2MjcsImV4cCI6MjEwNDQ2NDYyN30.r6rgrHVL0Qg_CiG0QZy8RhQE80r0fGE0Fv0sPqFwrc0"
