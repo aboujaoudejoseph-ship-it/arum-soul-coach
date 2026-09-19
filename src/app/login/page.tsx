@@ -57,9 +57,9 @@ export default function LoginPage() {
             />
           </div>
 
-          {state.error && (
+          {state?.error && (
             <p className="rounded-lg bg-blush-100 px-3 py-2 text-sm text-blush-600">
-              {state.error}
+              {state?.error}
             </p>
           )}
 
