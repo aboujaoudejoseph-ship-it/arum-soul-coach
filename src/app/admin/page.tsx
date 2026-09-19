@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { formatDistanceToNow } from "date-fns";
 import { createClient } from "@/lib/supabase/server";
 import { moodScore } from "@/lib/mood";
@@ -11,6 +12,7 @@ export default async function AdminOverviewPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+  if (!user) redirect("/login");
 
   const { data: clients } = await supabase
     .from("users")
