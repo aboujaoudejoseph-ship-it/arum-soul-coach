@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import Link from "next/link";
 import { login, type LoginState } from "./actions";
@@ -21,6 +22,7 @@ function SubmitButton() {
 
 export default function LoginPage() {
   const [state, formAction] = useFormState(login, initialState);
+  useEffect(() => { if (state?.redirectTo) window.location.href = state.redirectTo; }, [state]);
 
   return (
     <main className="flex min-h-screen items-center justify-center px-6">
