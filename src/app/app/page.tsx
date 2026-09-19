@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import MoodCheckin from "@/components/client/MoodCheckin";
@@ -16,6 +17,7 @@ export default async function ClientTodayPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+  if (!user) redirect("/login");
 
   const today = new Date().toISOString().slice(0, 10);
 
