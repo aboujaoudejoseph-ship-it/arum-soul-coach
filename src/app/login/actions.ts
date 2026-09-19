@@ -6,6 +6,7 @@ import { usernameToLoginEmail } from "@/lib/username";
 
 export interface LoginState {
   error?: string;
+  redirectTo?: string;
 }
 
 export async function login(
@@ -37,10 +38,10 @@ export async function login(
     .single();
 
   if (profile?.role === "coach") {
-    redirect("/admin");
+        return { redirectTo: "/admin" };
   }
   if (profile?.role === "client") {
-    redirect("/app");
+        return { redirectTo: "/app" };
   }
 
   return { error: "This account has no role assigned yet. Contact your coach." };
